@@ -1,0 +1,122 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="false">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#">Navbar</a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect>Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect>Pricing</a>
+      </li>
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          Basic dropdown<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
+          <div class="divider dropdown-divider"></div>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+        </div>
+      </li>
+
+    </ul>
+    <!-- Links -->
+
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link">
+          <mdb-icon fab icon="twitter"></mdb-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <mdb-icon fab icon="google-plus"></mdb-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <div class="btn-group" mdbDropdown>
+            <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+            <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="divider dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+
+<div class="container" style="align-self: center">
+<!-- Search form -->
+<form class="form-inline md-form form-sm">
+  <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search"
+         mdbInput>
+  <i class="fas fa-search" aria-hidden="true"></i>
+</form>
+
+<!-- Card -->
+<mdb-card class="col-4">
+  <!--Card content-->
+  <mdb-card-body>
+    <!--Title-->
+    <mdb-card-title>
+      <h4>Boussaid Yasmine</h4>
+    </mdb-card-title>
+
+    <!--Text-->
+    <mdb-card-text>
+      <h5>Address: 22 Rue Hanibal</h5>
+      <h5>Blood type : mana3rech</h5>
+      <br>
+    </mdb-card-text>
+
+    <a href="#" mdbBtn color="primary" mdbWavesEffect>Ask for blood</a>
+  </mdb-card-body>
+</mdb-card>
+<!-- Card -->
+</div>
+
+<div *ngIf="feeds" style="background-image: url('http://media.pennlive.com/opinion/photo/newspaper-background-art-c97d525e62886f4f.jpg')">
+  <!--<mat-grid-list cols="3" rowHeight="650px">-->
+  <div class="row"  style="display:flex; justify-content: space-around">
+    <div class="col3" *ngFor="let donor of donors">
+      <div class="card" style="width: 400px !important">
+        <!--Card image-->
+        <!--<img *ngIf="feed.image_src" class="img-fluid" src="{{feed.image_src}}" alt="Card image cap">-->
+        <!--Card content-->
+        <div class="card-body">
+          <!--Title-->
+          <h4 class="card-title">{{donor.first-name}}</h4>
+          <!--Text-->
+          <p class="card-text">{{donor.last-name}}</p>
+          <a href="#" target="_blank" class="btn btn-primary waves-light" mdbWavesEffect>Ask for blood</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="feeds.length === 0">No matches found</div>
+  <!--</mat-grid-list>-->
+</div>
+
+

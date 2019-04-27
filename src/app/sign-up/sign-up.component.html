@@ -1,57 +1,154 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="false">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#">Navbar</a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect>Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect>Pricing</a>
+      </li>
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          Basic dropdown<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
+          <div class="divider dropdown-divider"></div>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+        </div>
+      </li>
+
+    </ul>
+    <!-- Links -->
+
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link">
+          <mdb-icon fab icon="twitter"></mdb-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <mdb-icon fab icon="google-plus"></mdb-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <div class="btn-group" mdbDropdown>
+            <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+            <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="divider dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+
 <body>
 <div class="container">
   <div class="row">
-  <div class="card col-6 offset-3" style="margin-top: 100px; margin-bottom: 100px">
+  <div class="card col-8 offset-3" style="margin: auto; margin-top: 20px">
     <div class="card-header">
       <h1 class="h4 mb-4 text-center">Sign Up</h1>
     </div>
     <div class="card-body">
-      <form  style="background-color: white">
+      <form  style="background-color: white" (ngSubmit)="signup()">
           <div class="row">
             <div class="col">
-              <input type="text" class="form-control" placeholder="First name">
+              <input type="text" class="form-control" placeholder="First name" [(ngModel)]="firstName">
             </div>
             <div class="col">
-              <input type="text" class="form-control" placeholder="Last name">
+              <input type="text" class="form-control" placeholder="Last name" [(ngModel)]="lastName">
             </div>
           </div>
         <br>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+              <input type="email" class="form-control" id="inputEmail4" placeholder="Email" [(ngModel)]="email">
         <br>
-              <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+              <input type="password" class="form-control" id="inputPassword4" placeholder="Password" [(ngModel)]="password">
         <br>
-            <input type="text" class="form-control" id="inputAddress" placeholder="Address">
+            <input type="text" class="form-control" id="inputAddress" placeholder="Address" [(ngModel)]="address">
         <br>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <input type="text" class="form-control" id="inputCity" placeholder="City">
+              <input type="text" class="form-control" id="inputCity" placeholder="City" [(ngModel)]="city">
             </div>
             <div class="form-group col-md-6">
-              <input type="text" class="form-control" id="inputZip" placeholder="Zip code">
+              <input type="text" class="form-control" id="inputZip" placeholder="Zip code" [(ngModel)]="zipCode">
             </div>
           </div>
-        <input type="number" class="form-control" placeholder="Phone number">
+        <br>
+        <input type="number" class="form-control" placeholder="Phone number" [(ngModel)]="phoneNumber">
+        <br>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="number" class="form-control" id="height" placeholder="Height" [(ngModel)]="height">
+          </div>
+          <div class="form-group col-md-6">
+            <input type="number" class="form-control" id="weight" placeholder="Weight" [(ngModel)]="weight">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-3">
+            <label>Blood type : </label>
+          </div>
+          <div class="col-3">
+            <select class="browser-default custom-select">
+              <option value="1">AB+</option>
+              <option value="2">AB-</option>
+              <option value="3">A+</option>
+              <option value="5">A-</option>
+              <option value="6">B+</option>
+              <option value="7">B-</option>
+              <option value="8">O+</option>
+              <option value="9">O-</option>
+            </select>
+          </div>
+        </div>
         <br>
         <!-- Default inline 1-->
         <div class="row">
-          <div class="col-4">
-            <label>Gender : </label>
+          <div class="col-3">
+            <label>Gender: </label>
           </div>
-          <div class="custom-control custom-radio custom-control-inline col-4">
+          <div class="custom-control custom-radio custom-control-inline col-3">
             <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
             <label class="custom-control-label" for="defaultInline1">Male</label>
           </div>
 
           <!-- Default inline 2-->
-          <div class="custom-control custom-radio custom-control-inline col-4">
+          <div class="custom-control custom-radio custom-control-inline col-3">
             <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
             <label class="custom-control-label" for="defaultInline2">Female</label>
           </div>
         </div>
-
         <br>
         <textarea class="form-control" placeholder="Indiquate if you have other sickness"></textarea>
-          <button type="submit" class="btn btn-primary btn-md">Sign in</button>
+        <br>
+        <button type="submit" class="btn btn-primary btn-md">Sign Up</button>
         <!-- Extended default form grid -->
       </form>
     </div>
