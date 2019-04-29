@@ -8,12 +8,26 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { SearchDonorComponent } from './search-donor/search-donor.component';
 import {FindDonorService} from './shared/find-donor.service';
+import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { PersonalInfoComponent } from './personal-info/personal-info.component';
+import { PersonalDonationsComponent } from './personal-donations/personal-donations.component';
+import { PersonalRequestsComponent } from './personal-requests/personal-requests.component';
+import { SigninComponent } from './signin/signin.component';
+import { RequestFormComponent } from './request-form/request-form.component';
 
 const appRoutes: Routes = [
   { path: '', component: AppComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'home', component: HomePageComponent},
-  { path: 'find-donor', component: SearchDonorComponent}
+  { path: 'find-donor', component: SearchDonorComponent},
+  { path: 'personal-info', component: PersonalInfoComponent},
+  { path: 'personal-donations', component: PersonalDonationsComponent},
+  { path: 'personal-requests', component: PersonalRequestsComponent},
+  { path: 'signin', component: SigninComponent},
+  { path: 'request-form', component: RequestFormComponent}
+
+
 ];
 
 @NgModule({
@@ -21,7 +35,14 @@ const appRoutes: Routes = [
     AppComponent,
     SignUpComponent,
     HomePageComponent,
-    SearchDonorComponent
+    SearchDonorComponent,
+    FooterComponent,
+    NavbarComponent,
+    PersonalInfoComponent,
+    PersonalDonationsComponent,
+    PersonalRequestsComponent,
+    SigninComponent,
+    RequestFormComponent
   ],
   imports: [
     BrowserModule,

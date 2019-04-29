@@ -1,91 +1,62 @@
-<!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="false">
+<app-navbar></app-navbar>
 
-  <!-- Navbar brand -->
-  <mdb-navbar-brand><a class="navbar-brand" href="#">Navbar</a></mdb-navbar-brand>
-
-  <!-- Collapsible content -->
-  <links>
-
-    <!-- Links -->
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect>Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect>Pricing</a>
-      </li>
-
-      <!-- Dropdown -->
-      <li class="nav-item dropdown" dropdown>
-        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-          Basic dropdown<span class="caret"></span></a>
-        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
-          <div class="divider dropdown-divider"></div>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
-        </div>
-      </li>
-
-    </ul>
-    <!-- Links -->
-
-    <ul class="navbar-nav ml-auto nav-flex-icons">
-      <li class="nav-item">
-        <a class="nav-link">
-          <mdb-icon fab icon="twitter"></mdb-icon>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link">
-          <mdb-icon fab icon="google-plus"></mdb-icon>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link">
-          <div class="btn-group" mdbDropdown>
-            <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
-            <div class="dropdown-menu dropdown-menu-right dropdown-primary">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="divider dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </div>
-        </a>
-      </li>
-    </ul>
-  </links>
-  <!-- Collapsible content -->
-
-</mdb-navbar>
-<!--/.Navbar-->
-
-<div class="container" style="align-self: center">
-<!-- Search form -->
-<form class="form-inline md-form form-sm">
+<div class="container mb-5" style="align-self: center">
+  <!-- Search form -->
+  <!--<form class="form-inline md-form form-sm">
   <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search"
          mdbInput>
   <i class="fas fa-search" aria-hidden="true"></i>
-</form>
+</form>-->
 
-<!-- Card -->
-<mdb-card class="col-4">
+  <!-- Search form -->
+  <div class="md-form form-sm active-pink active-pink-2">
+
+    <div class="row">
+      <div class="col-md-6">
+        <i class="fas fa-search" aria-hidden="true"></i>
+        <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search" mdbInput>
+      </div>
+      <div class="col-md-4 mt-4">
+        <select class="browser-default custom-select">
+      <option selected>Choose your blood group</option>
+      <option value="1">A+</option>
+      <option value="2">A-</option>
+      <option value="3">B+</option>
+      <option value="4">B-</option>
+      <option value="5">O+</option>
+      <option value="6">O-</option>
+      <option value="7">AB+</option>
+      <option value="8">AB-</option>
+
+    </select>
+      </div>
+
+      <div class="col-md-2 mt-4">
+        <button mdbBtn size="sm" color="success" outline="true" rounded="true" class="my-0 waves-light" mdbWavesEffect type="submit">Search &nbsp;<i class="fas fa-search"></i></button>
+
+      </div>
+
+    </div>
+    <br>
+    <hr>
+
+
+
+
+  </div>
+
+
+  <!-- Card -->
+  <!--<mdb-card class="col-4 card-deck">-->
   <!--Card content-->
-  <mdb-card-body>
-    <!--Title-->
-    <mdb-card-title>
+  <!--<mdb-card-body>-->
+  <!--Title-->
+  <!--<mdb-card-title>
       <h4>Boussaid Yasmine</h4>
-    </mdb-card-title>
+    </mdb-card-title>-->
 
-    <!--Text-->
-    <mdb-card-text>
+  <!--Text-->
+  <!--<mdb-card-text>
       <h5>Address: 22 Rue Hanibal</h5>
       <h5>Blood type : mana3rech</h5>
       <br>
@@ -93,13 +64,262 @@
 
     <a href="#" mdbBtn color="primary" mdbWavesEffect>Ask for blood</a>
   </mdb-card-body>
-</mdb-card>
-<!-- Card -->
+
+
+</mdb-card>-->
+
+
+  <!-- Grid row -->
+  <div class="row">
+
+    <div class="col-lg-4 col-md-6 mt-5">
+
+      <!--Panel-->
+      <div class="card text-center">
+        <!--<div class=" card-header success-color white-text">
+      Featured
+    </div>-->
+        <div class="card-body">
+          <span class="card-text"> Blood group</span>
+          <h3 class="card-title text-danger">
+            <span class="badge badge-success badge-pill">B+</span>
+          </h3>
+
+          <!--<p class="card-text">Blood group</p>-->
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Mohamed Aziz Bibi
+              <!--<span class="badge badge-primary badge-pill">14</span>-->
+              <i class="far fa-address-card text-danger"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              11, Rue Crémieux, Menzah 1
+              <!--<span class="badge badge-primary badge-pill">2</span>-->
+              <i class="fas fa-map-marker-alt text-danger"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Male
+              <!--<i class="far fa-address-book text-danger"></i>-->
+              <i class="fas fa-transgender text-danger"></i>
+
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              +216 23 321 757
+              <!--<span class="badge badge-primary badge-pill">2</span>-->
+              <i class="fas fa-mobile-alt text-danger"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              bibi.mohamedaziz@gmail.com
+              <!--<span class="badge badge-primary badge-pill">1</span>-->
+              <i class="far fa-envelope text-danger"></i>
+            </li>
+
+
+          </ul>
+          <br>
+          <a class="btn btn-danger btn-md">Ask for blood &nbsp; <i class="fas fa-heartbeat"></i> </a>
+        </div>
+        <!--<div class="card-footer text-muted success-color white-text">
+      <p class="mb-0">2 days ago</p>
+    </div>-->
+      </div>
+      <!--/.Panel-->
+    </div>
+    <!-- Grid column -->
+
+
+    <div class="col-lg-4 col-md-6 mt-5">
+
+      <!--Panel-->
+      <div class="card text-center">
+        <!--<div class=" card-header success-color white-text">
+      Featured
+    </div>-->
+        <div class="card-body">
+          <span class="card-text"> Blood group</span>
+          <h3 class="card-title text-danger">
+            <span class="badge badge-success badge-pill">AB-</span>
+          </h3>
+
+          <!--<p class="card-text">Blood group</p>-->
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Mohamed Aziz Bibi
+              <!--<span class="badge badge-primary badge-pill">14</span>-->
+              <i class="far fa-address-card text-danger"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              11, Rue Crémieux, Menzah 1
+              <!--<span class="badge badge-primary badge-pill">2</span>-->
+              <i class="fas fa-map-marker-alt text-danger"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Male
+              <!--<i class="far fa-address-book text-danger"></i>-->
+              <i class="fas fa-transgender text-danger"></i>
+
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              +216 23 321 757
+              <!--<span class="badge badge-primary badge-pill">2</span>-->
+              <i class="fas fa-mobile-alt text-danger"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              bibi.mohamedaziz@gmail.com
+              <!--<span class="badge badge-primary badge-pill">1</span>-->
+              <i class="far fa-envelope text-danger"></i>
+            </li>
+
+
+          </ul>
+          <br>
+          <a class="btn btn-danger btn-md">Ask for blood &nbsp; <i class="fas fa-heartbeat"></i> </a>
+        </div>
+        <!--<div class="card-footer text-muted success-color white-text">
+      <p class="mb-0">2 days ago</p>
+    </div>-->
+      </div>
+      <!--/.Panel-->
+    </div>
+    <!-- Grid column -->
+
+    <div class="col-lg-4 col-md-6 mt-5">
+
+      <!--Panel-->
+      <div class="card text-center">
+        <!--<div class=" card-header success-color white-text">
+      Featured
+    </div>-->
+        <div class="card-body">
+          <span class="card-text"> Blood group</span>
+          <h3 class="card-title text-danger">
+            <span class="badge badge-success badge-pill">B+</span>
+          </h3>
+
+          <!--<p class="card-text">Blood group</p>-->
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Mohamed Aziz Bibi
+              <!--<span class="badge badge-primary badge-pill">14</span>-->
+              <i class="far fa-address-card text-danger"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              11, Rue Crémieux, Menzah 1
+              <!--<span class="badge badge-primary badge-pill">2</span>-->
+              <i class="fas fa-map-marker-alt text-danger"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Male
+              <!--<i class="far fa-address-book text-danger"></i>-->
+              <i class="fas fa-transgender text-danger"></i>
+
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              +216 23 321 757
+              <!--<span class="badge badge-primary badge-pill">2</span>-->
+              <i class="fas fa-mobile-alt text-danger"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              bibi.mohamedaziz@gmail.com
+              <!--<span class="badge badge-primary badge-pill">1</span>-->
+              <i class="far fa-envelope text-danger"></i>
+            </li>
+
+
+          </ul>
+          <br>
+          <a class="btn btn-danger btn-md">Ask for blood &nbsp; <i class="fas fa-heartbeat"></i> </a>
+        </div>
+        <!--<div class="card-footer text-muted success-color white-text">
+      <p class="mb-0">2 days ago</p>
+    </div>-->
+      </div>
+      <!--/.Panel-->
+    </div>
+    <!-- Grid column -->
+
+    <div class="col-lg-4 col-md-6 mt-5">
+
+      <!--Panel-->
+      <div class="card text-center">
+        <!--<div class=" card-header success-color white-text">
+      Featured
+    </div>-->
+        <div class="card-body">
+          <span class="card-text"> Blood group</span>
+          <h3 class="card-title text-danger">
+            <span class="badge badge-success badge-pill">B+</span>
+          </h3>
+
+          <!--<p class="card-text">Blood group</p>-->
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Mohamed Aziz Bibi
+              <!--<span class="badge badge-primary badge-pill">14</span>-->
+              <i class="far fa-address-card text-danger"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              11, Rue Crémieux, Menzah 1
+              <!--<span class="badge badge-primary badge-pill">2</span>-->
+              <i class="fas fa-map-marker-alt text-danger"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Male
+              <!--<i class="far fa-address-book text-danger"></i>-->
+              <i class="fas fa-transgender text-danger"></i>
+
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              +216 23 321 757
+              <!--<span class="badge badge-primary badge-pill">2</span>-->
+              <i class="fas fa-mobile-alt text-danger"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              bibi.mohamedaziz@gmail.com
+              <!--<span class="badge badge-primary badge-pill">1</span>-->
+              <i class="far fa-envelope text-danger"></i>
+            </li>
+
+
+          </ul>
+          <br>
+          <a class="btn btn-danger btn-md">Ask for blood &nbsp; <i class="fas fa-heartbeat"></i> </a>
+        </div>
+        <!--<div class="card-footer text-muted success-color white-text">
+      <p class="mb-0">2 days ago</p>
+    </div>-->
+      </div>
+      <!--/.Panel-->
+    </div>
+    <!-- Grid column -->
+
+    <div class="col-lg-4 col-md-6 mt-5">
+
+      it works !
+
+    </div>
+    <!-- Grid column -->
+
+    <div class="col-lg-4 col-md-6 mt-5">
+
+      it works !
+
+    </div>
+    <!-- Grid column -->
+
+
+  </div>
+  <!-- Grid row -->
+
+
+
+
+  <!-- Card -->
 </div>
 
 <div *ngIf="feeds" style="background-image: url('http://media.pennlive.com/opinion/photo/newspaper-background-art-c97d525e62886f4f.jpg')">
   <!--<mat-grid-list cols="3" rowHeight="650px">-->
-  <div class="row"  style="display:flex; justify-content: space-around">
+  <div class="row" style="display:flex; justify-content: space-around">
     <div class="col3" *ngFor="let donor of donors">
       <div class="card" style="width: 400px !important">
         <!--Card image-->
@@ -113,6 +333,7 @@
           <a href="#" target="_blank" class="btn btn-primary waves-light" mdbWavesEffect>Ask for blood</a>
         </div>
       </div>
+
     </div>
   </div>
   <div *ngIf="feeds.length === 0">No matches found</div>
@@ -120,3 +341,51 @@
 </div>
 
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Subscription Form Demo</h4>
+
+        <p>This is Bootstrap Modal popup example.</p>
+      </div>
+      <div class="modal-body">
+
+        <!--End mc_embed_signup-->
+
+        <!-- Begin MailChimp Signup Form -->
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" />
+            </div>
+          </div>
+          <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;"><input type="text" name="b_9e279011b21a23e1aed5e4868_cca4394bc9" value="" /></div>
+          <div class="form-group remove-bottom">
+            <div class="col-sm-offset-2 col-sm-10">
+              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default" />
+            </div>
+          </div>
+        </form>
+
+        <!--End mc_embed_signup-->
+      </div>
+      <div class="modal-footer remove-top">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<app-footer></app-footer>

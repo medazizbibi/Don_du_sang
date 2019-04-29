@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 export class HomePageComponent implements OnInit {
 
   email: string;
-  pasword: string;
+  password: string;
   constructor(private signService : SigninSignupService, private router: Router) { }
 
   ngOnInit() {

@@ -34,7 +34,9 @@
             ],
             "scripts": [
               "node_modules/chart.js/dist/Chart.js",
-              "node_modules/hammerjs/hammer.min.js"],
+              "node_modules/hammerjs/hammer.min.js",
+              "src/assets/js/jquery.cookie.js",
+              "src/assets/js/modal.js"],
             "es5BrowserSupport": true
           },
           "configurations": {

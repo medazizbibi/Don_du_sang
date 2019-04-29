@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {donor} from './donor';
+import {Donor} from '../donor';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
@@ -13,10 +13,10 @@ export class FindDonorService {
   constructor(private http: HttpClient) {
   }
 
-  public getDonors(searchPhrase: string): Observable<donor[]> {
-    const obs = this.http.post<donor[]>(this.api + 'donors', searchPhrase);
-    return obs;
-  }
+  //  public getDonors(searchPhrase: string): Observable<Donor[]> {
+  //    const obs = this.http.post<Donor[]>(this.api + 'donors', searchPhrase);
+  //    return obs;
+  //  }
 }
 
 
