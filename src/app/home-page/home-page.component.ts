@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {SigninSignupService} from '../shared/signing/signin-signup.service';
 import {Router} from '@angular/router';
 
+declare const myTest:any;
+
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -14,6 +16,7 @@ export class HomePageComponent implements OnInit {
   constructor(private signService : SigninSignupService, private router: Router) { }
 
   ngOnInit() {
+    myTest();
   }
 
   login(): void {
